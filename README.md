@@ -7,7 +7,7 @@ The Flashcard_CultureApp application allows you to create a simple interface wit
 - A back side displaying the answer
 
 ### App Walk-though
-<img src="https://submissions.us-east-1.linodeobjects.com/mobile_app_design/TPKUCk93.gif" width=200><br>
+<img src="TPKUCk93.gif" width=200><br>
 
 ## Required
 - [x] Create New Project in Android Studio
