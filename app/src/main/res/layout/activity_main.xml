@@ -10,8 +10,8 @@
         android:gravity="center"
         android:text="Who is the 44th President of the United States?"
         android:textSize="40sp"
-        android:background="#EF7722"
-
+        android:background="@drawable/background_shape"
+        android:textColor="@color/gris"
         />
 
     <TextView
@@ -21,8 +21,9 @@
         android:gravity="center"
         android:text="Barack Obama"
         android:textSize="40sp"
+        android:textColor="@color/gris"
         android:visibility="invisible"
-        android:background="#FAA533"
+        android:background="@drawable/background_shape"
         />
     <!--android:layout_below="@id/flashcard_question"-->
 </RelativeLayout>
