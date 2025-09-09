@@ -11,4 +11,6 @@
     <color name="jaune">#FAA533</color>
     <color name="gris">#EBEBEB</color>
     <color name="bleu">#0BA6DF</color>
+    <color name="rouge">#FF0000</color>
+    <color name="vert">#08CC0A</color>
 </resources>

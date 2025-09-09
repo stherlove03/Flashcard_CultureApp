@@ -7,6 +7,7 @@
         android:id="@+id/flashcard_question"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:layout_marginBottom="50dp"
         android:gravity="center"
         android:text="Who is the 44th President of the United States?"
         android:textSize="40sp"
@@ -17,13 +18,39 @@
     <TextView
         android:id="@+id/flashcard_answer"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="Bill Clinton"
+        android:textSize="40sp"
+        android:textColor="@color/gris"
+        android:background="@color/bleu"
+        android:layout_below="@id/flashcard_question"
+        />
+
+    <TextView
+        android:id="@+id/flashcard_answer1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="George H. W. Bush"
+        android:textSize="40sp"
+        android:textColor="@color/gris"
+        android:background="@color/bleu"
+        android:layout_below="@id/flashcard_answer"
+        />
+
+    <TextView
+        android:id="@+id/flashcard_answer2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
         android:gravity="center"
         android:text="Barack Obama"
         android:textSize="40sp"
         android:textColor="@color/gris"
-        android:visibility="invisible"
-        android:background="@drawable/background_shape"
+        android:background="@color/bleu"
+        android:layout_below="@id/flashcard_answer1"
         />
-    <!--android:layout_below="@id/flashcard_question"-->
 </RelativeLayout>
