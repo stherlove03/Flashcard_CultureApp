@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CultureApp">
         <activity
+            android:name=".AddCardActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Theme.CultureApp">
