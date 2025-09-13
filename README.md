@@ -1,12 +1,35 @@
 # Flashcard_CultureApp
+## Lab 2
+
+### App Description
+The Flashcard_CultureApp now allows users to add their own flashcards in addition to the original Q&A display.  
+Users can open an “Add Card” screen, enter a question, a correct answer, and two wrong answers, then save or cancel.  
+Cards can also be edited after creation, and the app shows error and success messages.
+
+### App Walk-through
+<img src="Lab2_GiF.gif" width=200><br>
+
+## Required
+- [x] User can click on a ‘+’ button that takes the user to new ‘Add Card Screen’
+- [x] The 'Add Card Screen' has a cancel button to take the user back to the main screen
+- [x] User can enter and submit a Question and Answer through the 'Add Card Screen'
+- [x] User will see the card they just created on the main screen when they press the 'Save Button'
+- [x] Push your progress to GitHub!
+
+## Optional
+- [x] User can edit a card
+- [x] An error message is shown if the user doesn't enter both a Question and an Answer
+- [x] A notification is shown if the card was created successfully
+- [x] User can also enter multiple choice answers when creating a card
+- [ ] App is further styled and customized!
+
+
 ## Lab 1
 
 ### App Description
-The Flashcard_CultureApp application allows you to create a simple interface with two sides:
-- A front side displaying a question
-- A back side displaying the answer
+The Flashcard_CultureApp shows a question and answer, lets users toggle between them, and includes multiple-choice options styled with color feedback for correct or incorrect answers.
 
-### App Walk-though
+### App Walk-through
 <img src="Preview.gif" width=200><br>
 
 ## Required
