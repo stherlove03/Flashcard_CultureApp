@@ -16,12 +16,12 @@ class AddCardActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main2)
-        val cancel_button=findViewById<ImageView>(R.id.cancel_button)
+        val cancel_button= findViewById<ImageView>(R.id.cancel_button)
         val save_button = findViewById<ImageView>(R.id.save_button)
-        val editing_question= intent.getStringExtra("added_question");
-        val editing_answer= intent.getStringExtra("added_answer");
-        val editing_wrong_answer= intent.getStringExtra("added_wrong_answer");
-        val editing_wrong_answer1= intent.getStringExtra("added_wrong_answer1");
+        val editing_question= intent.getStringExtra("added_question")
+        val editing_answer= intent.getStringExtra("added_answer")
+        val editing_wrong_answer= intent.getStringExtra("added_wrong_answer")
+        val editing_wrong_answer1= intent.getStringExtra("added_wrong_answer1")
 
         findViewById<EditText>(R.id.add_question).setText(editing_question)
         findViewById<EditText>(R.id.add_answer).setText(editing_answer)
@@ -29,11 +29,11 @@ class AddCardActivity : AppCompatActivity() {
         findViewById<EditText>(R.id.add_wrong_answer1).setText(editing_wrong_answer1)
 
         cancel_button.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            //val intent = Intent(this, MainActivity::class.java)
+            setResult(RESULT_CANCELED)
             finish()
         }
-        val toast = Toast.makeText(applicationContext, "Must enter both the Question and Answer", Toast.LENGTH_SHORT)
-        //toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0)
+        val toast = Toast.makeText(applicationContext, "Must enter the Question, Answer and Wrong Answers", Toast.LENGTH_SHORT)
 
         save_button.setOnClickListener {
             val add_question = findViewById<EditText>(R.id.add_question).text

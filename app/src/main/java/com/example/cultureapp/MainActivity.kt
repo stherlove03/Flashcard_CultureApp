@@ -8,7 +8,6 @@ import android.widget.TextView
 import android.widget.ImageView
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.ui.graphics.Color
 import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
@@ -24,8 +23,9 @@ class MainActivity : AppCompatActivity() {
         var isShowingAnswers = true
         val add_button= findViewById<ImageView>(R.id.add_button)
         val edit_button= findViewById<ImageView>(R.id.edit_button)
-        // Quand on clique sur la question, elle disparaît et la réponse apparaît
-/*        flashcardQuestion.setOnClickListener {
+
+
+        /*flashcardQuestion.setOnClickListener {
             flashcardQuestion.visibility = View.INVISIBLE
             flashcardAnswer.visibility = View.VISIBLE
         }
@@ -59,35 +59,41 @@ class MainActivity : AppCompatActivity() {
         }
 
         val resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-            val data: Intent? = result.data
-            if (data != null) { // Check that we have data returned
-                val added_question = data.getStringExtra("added_question") // 'string1' needs to match the key we used when we put the string in the Intent
-                val added_answer= data.getStringExtra("added_answer")
-                val added_wrong_answer = data.getStringExtra("added_wrong_answer")
-                val added_wrong_answer1 = data.getStringExtra("added_wrong_answer1")
+            if (result.resultCode == RESULT_OK) {
+                val data: Intent? = result.data
+                if (data != null) {
+                    val added_question = data.getStringExtra("added_question")
+                    val added_answer = data.getStringExtra("added_answer")
+                    val added_wrong_answer = data.getStringExtra("added_wrong_answer")
+                    val added_wrong_answer1 = data.getStringExtra("added_wrong_answer1")
 
-                flashcardQuestion.text = added_question
-                flashcardAnswer2.text=added_answer
-                flashcardAnswer.text=added_wrong_answer
-                flashcardAnswer1.text=added_wrong_answer1
-            } else {
-                Log.i("MainActivity", "Returned null data from AddCardActivity")
+                    flashcardQuestion.text = added_question
+                    flashcardAnswer2.text = added_answer
+                    flashcardAnswer.text = added_wrong_answer
+                    flashcardAnswer1.text = added_wrong_answer1
+                }
+
+                Snackbar.make(
+                    findViewById(R.id.flashcard_question),
+                    "Card Successfully Created",
+                    Snackbar.LENGTH_SHORT
+                ).show()
+            } else if (result.resultCode == RESULT_CANCELED) {
+                // ici tu peux afficher un autre message si tu veux, ou rien
+                Log.i("MainActivity", "User canceled the card creation")
             }
-            Snackbar.make(findViewById(R.id.flashcard_question),
-                "Card Successfully Created",
-                Snackbar.LENGTH_SHORT)
-                .show()
         }
+
         add_button.setOnClickListener {
             val intent = Intent(this, AddCardActivity::class.java)
             resultLauncher.launch(intent)
         }
         edit_button.setOnClickListener {
             val intent = Intent(this, AddCardActivity::class.java)
-            intent.putExtra("added_question", flashcardQuestion.text.toString());
-            intent.putExtra("added_answer", flashcardAnswer2.text.toString());
-            intent.putExtra("added_wrong_answer", flashcardAnswer.text.toString());
-            intent.putExtra("added_wrong_answer1", flashcardAnswer1.text.toString());
+            intent.putExtra("added_question", flashcardQuestion.text.toString())
+            intent.putExtra("added_answer", flashcardAnswer2.text.toString())
+            intent.putExtra("added_wrong_answer", flashcardAnswer.text.toString())
+            intent.putExtra("added_wrong_answer1", flashcardAnswer1.text.toString())
             resultLauncher.launch(intent)
         }
     }
