@@ -6,8 +6,8 @@ The Flashcard_CultureApp now allows users to add their own flashcards in additio
 Users can open an “Add Card” screen, enter a question, a correct answer, and two wrong answers, then save or cancel.  
 Cards can also be edited after creation, and the app shows error and success messages.
 
-### App Walk-though
-<img src="Lab2_GiF.gif.gif" width=200><br>
+### App Walk-through
+<img src="Lab2_GiF.gif" width=200><br>
 
 ## Required
 - [x] User can click on a ‘+’ button that takes the user to new ‘Add Card Screen’
@@ -29,7 +29,7 @@ Cards can also be edited after creation, and the app shows error and success mes
 ### App Description
 The Flashcard_CultureApp shows a question and answer, lets users toggle between them, and includes multiple-choice options styled with color feedback for correct or incorrect answers.
 
-### App Walk-though
+### App Walk-through
 <img src="Preview.gif" width=200><br>
 
 ## Required
