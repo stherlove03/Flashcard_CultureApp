@@ -7,7 +7,7 @@ Users can open an “Add Card” screen, enter a question, a correct answer, and
 Cards can also be edited after creation, and the app shows error and success messages.
 
 ### App Walk-though
-<img src="Preview.gif" width=200><br>
+<img src="Lab2_GiF.gif.gif" width=200><br>
 
 ## Required
 - [x] User can click on a ‘+’ button that takes the user to new ‘Add Card Screen’
